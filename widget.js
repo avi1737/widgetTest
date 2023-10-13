@@ -1,0 +1,1 @@
+!function () { const e = document.getElementById("widget-container"), t = window.widgetConfig || {}, n = document.createElement("div"); n.classList.add("widget"), n.style.color = t.textColor || "black", n.innerHTML = `<h2>${t.greeting || "Hello, World!"}</h2>`, e.appendChild(n) }();
