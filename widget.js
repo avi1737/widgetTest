@@ -1,1 +1,16 @@
-!function () { const e = document.getElementById("widget-container"), t = window.widgetConfig || {}, n = document.createElement("div"); n.classList.add("widget"), n.style.color = t.textColor || "black", n.innerHTML = `<h2>${t.greeting || "Hello, World!"}</h2>`, e.appendChild(n) }();
+(function () {
+    // Create a container for the widget
+    const widgetContainer = document.getElementById("widget-container");
+
+    // Load configuration from the global variable set by the customer
+    const config = window.widgetConfig || {};
+
+    // Create and style the widget
+    const widget = document.createElement("div");
+    widget.classList.add("widget");
+    widget.style.color = config.textColor || "black";
+    widget.innerHTML = `<h2>${config.greeting || "Hello, World!"}</h2>`;
+
+    // Append the widget to the container
+    widgetContainer.appendChild(widget);
+})();
